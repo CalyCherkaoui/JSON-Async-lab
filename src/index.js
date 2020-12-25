@@ -10,7 +10,7 @@ let request = new XMLHttpRequest();
 // open request with GET
 request.open('GET', requestURL);
 
-//here we are setting the responseType to JSON, so that XHR knows that the server will be returning JSON
+//set the XHR request to convert the JSON response directly into a JavaScript object 
 request.responseType = 'json';
 
 //Then we send the request with the send() method
