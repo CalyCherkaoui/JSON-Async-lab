@@ -1,4 +1,4 @@
 import './style/style.css';
 
-const container = document.querySelector('#container');
-container.innerHTML = '<h1>Hello world!!</h1>';
+const header = document.querySelector('header');
+const section = document.querySelector('section');
