@@ -66,3 +66,47 @@ function showHeroes(obj) {
     section.appendChild(myArticle);
   }
 }
+
+const happyFanForm = document.createElement('form');
+happyFanForm.setAttribute('id', 'happy_fan_form');
+const yesRadio = document.createElement('input');
+yesRadio.setAttribute('type', 'radio');
+yesRadio.setAttribute('name', 'happy?');
+yesRadio.setAttribute('value', 'happy Fan');
+const yesRadioLab = document.createElement('label');
+yesRadioLab.textContent = 'Yes! happy fan';
+
+const noRadio = document.createElement('input');
+noRadio.setAttribute('type', 'radio');
+noRadio.setAttribute('name', 'happy?');
+noRadio.setAttribute('value', 'unhappy fan');
+const noRadioLab = document.createElement('label');
+noRadioLab.textContent = 'No! unhappy fan';
+
+const submitBtn = document.createElement('button');
+submitBtn.setAttribute('id', 'happy_btn');
+submitBtn.textContent = 'Did the super hero squad get the fan vote?';
+
+const breakLn = document.createElement('br');
+
+happyFanForm.append(yesRadioLab, yesRadio, breakLn, noRadioLab, noRadio, submitBtn);
+
+section.appendChild(happyFanForm);
+
+const showFunVote = () => {
+  const radios = document.querySelectorAll('input[name="happy?"]');
+  for (const radio of radios) {
+    if (radio.checked) {
+      alert(radio.value);
+      break;
+      // return (radio.value === 'happy Fan');
+    }
+  }
+};
+
+submitBtn.addEventListener('click', showFunVote());
+
+
+
+
+
