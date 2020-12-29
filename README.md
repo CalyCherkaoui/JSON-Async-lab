@@ -74,6 +74,13 @@ Iportant dependencies used in this web application:
     <td></td>
     <td></td>
   </tr>
+  <tr>
+    <td>nodemon</td>
+    <td>Engine , a live development server</td>
+    <td>⭐️</td>
+    <td></td>
+    <td></td>
+  </tr>
   
 </table>
 
@@ -119,9 +126,14 @@ To lint your Js code:
 $ npx eslint . --fix
 ```
 
-to lint you styling:
+To lint you styling:
 ```
 $ npx stylelint "**/*.{css,scss}" --fix
+```
+
+To activate nodemon develpment server:
+```
+$ npm run dev-test
 ```
 
 
